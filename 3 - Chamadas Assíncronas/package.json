@@ -1,0 +1,11 @@
+{
+  "name": "3_chamadas_assincronas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "philiphe siqueira ferreira",
+  "license": "ISC"
+}
