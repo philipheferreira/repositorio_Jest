@@ -105,21 +105,57 @@ test('adicionando números de ponto flutuante', () => {
 
 // ################################################# STRINGS #################################################
 
+// Você pode verificar strings contra expressões regulares com toMatch:
 
-
+test('não existe I em team', () => {
+    expect('team').not.toMatch(/I/);
+  });
+  
+  test('mas existe "stop" em Christoph', () => {
+    expect('Christoph').toMatch(/stop/);
+  });
 
 
 
 // ########################################### ARRAYS E ITERÁVEIS ###########################################
 
+// Você pode verificar se um array ou iterável contém um item específico usando toContain:
 
 
-
+const shoppingList = [
+    'fraldas',
+    'kleenex',
+    'sacos de lixo',
+    'papel toalha',
+    'leite',
+  ];
+  
+  test('a lista de compras tem leite nela', () => {
+    expect(shoppingList).toContain('leite');
+    expect(new Set(shoppingList)).toContain('leite');
+  });
 
 
 // ################################################# EXCEÇÕES #################################################
 
+// Se você quiser testar se uma determinada função lança um erro quando é chamada, use toThrow.
 
+function compileAndroidCode() {
+    throw new Error('you are using the wrong JDK!');
+  }
+  
+  test('compiling android goes as expected', () => {
+    expect(() => compileAndroidCode()).toThrow();
+    expect(() => compileAndroidCode()).toThrow(Error);
+  
+    // You can also use a string that must be contained in the error message or a regexp
+    expect(() => compileAndroidCode()).toThrow('you are using the wrong JDK');
+    expect(() => compileAndroidCode()).toThrow(/JDK/);
+  
+    // Or you can match an exact error message using a regexp like below
+    expect(() => compileAndroidCode()).toThrow(/^you are using the wrong JDK$/); // Test fails
+    expect(() => compileAndroidCode()).toThrow(/^you are using the wrong JDK!$/); // Test pass
+  });
 
 
 
