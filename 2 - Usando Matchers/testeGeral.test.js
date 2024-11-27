@@ -32,13 +32,13 @@ incompatibilidade do tipo de objeto.
 
 // Você também pode testar o oposto de um matcher usando not:
 
-test('adicionando números positivos não é zero', () => {
-    for (let a = 1; a < 10; a++) {
-      for (let b = 1; b < 10; b++) {
-        expect(a + b).not.toBe(0);
-      }
+test('Adicionando números positivos não é zero', () => {
+    for( let a = 1; a < 10; a++){
+        for(let b = 1; b < 10; b++){
+            expect(a + b).not.toBe(0);
+        }
     }
-  });
+})
 
 
 // VERDADE 
@@ -56,23 +56,7 @@ que permitem você ser explícito sobre o que quer.
 
 */
 
-test('nulo', () => {
-    const n = null;
-    expect(n).toBeNull();
-    expect(n).toBeDefined();
-    expect(n).not.toBeUndefined();
-    expect(n).not.toBeTruthy();
-    expect(n).toBeFalsy();
-  });
-  
-  test('zero', () => {
-    const z = 0;
-    expect(z).not.toBeNull();
-    expect(z).toBeDefined();
-    expect(z).not.toBeUndefined();
-    expect(z).not.toBeTruthy();
-    expect(z).toBeFalsy();
-  });
+
 
 //Você deve usar o "matcher" que corresponde mais precisamente para o que você deseja que seu código faça.
 
