@@ -1,0 +1,14 @@
+{
+  "name": "1---primeiro-codigo-simples",
+  "version": "1.0.0",
+  "description": "primeiro codigo feito para o Jest",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "philiphe siqueira ferreira",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
