@@ -1,3 +1,5 @@
+// Para rodar a operação de teste é necessario rodar o npm run test
+
 /* USANDO MATCHERS
  O Jest usa "matchers" para que você possa testar valores de maneiras diferentes. 
 */
