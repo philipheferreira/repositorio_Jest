@@ -2,7 +2,7 @@
  O Jest usa "matchers" para que você possa testar valores de maneiras diferentes. 
 */
 
-// MATCHERS COMUNS
+// ################################################# MATCHERS COMUNS #################################################
 
 //A maneira mais simples para testar um valor é com igualdade exata.
 
@@ -41,7 +41,7 @@ test('Adicionando números positivos não é zero', () => {
 })
 
 
-// VERDADE 
+//################################################# VERDADE #################################################
 
 /*
 Em testes às vezes você precisa distinguir entre undefined, null e false, mas às 
@@ -56,8 +56,70 @@ que permitem você ser explícito sobre o que quer.
 
 */
 
-
+test('nulo', () => {
+    const n = null;
+    expect(n).toBeNull();
+    expect(n).toBeDefined();
+    expect(n).not.toBeUndefined();
+    expect(n).not.toBeTruthy();
+    expect(n).toBeFalsy();
+  });
+  
+  test('zero', () => {
+    const z = 0;
+    expect(z).not.toBeNull();
+    expect(z).toBeDefined();
+    expect(z).not.toBeUndefined();
+    expect(z).not.toBeTruthy();
+    expect(z).toBeFalsy();
+  });
 
 //Você deve usar o "matcher" que corresponde mais precisamente para o que você deseja que seu código faça.
+
+// ################################################# NÚMEROS #################################################
+
+// A maioria das formas de comparar números têm "matcher" equivalentes.
+
+test('dois mais dois', () => {
+    const value = 2 + 2;
+    expect(value).toBeGreaterThan(3);
+    expect(value).toBeGreaterThanOrEqual(3.5);
+    expect(value).toBeLessThan(5);
+    expect(value).toBeLessThanOrEqual(4.5);
+  
+    // toBe e toEqual são equivalentes para números
+    expect(value).toBe(4);
+    expect(value).toEqual(4);
+  });
+
+/*
+Para igualdade de ponto flutuante, use toBeCloseTo em vez de toEqual,
+ porque você não quer um teste dependa de um pequeno erro de arredondamento.
+*/
+
+test('adicionando números de ponto flutuante', () => {
+    const value = 0.1 + 0.2;
+    //expect(value).toBe(0.3);     Isso não vai funcionar por causa de um erro de arredondamento
+    expect(value).toBeCloseTo(0.3); // Isso funciona.
+  });
+
+// ################################################# STRINGS #################################################
+
+
+
+
+
+
+// ########################################### ARRAYS E ITERÁVEIS ###########################################
+
+
+
+
+
+
+// ################################################# EXCEÇÕES #################################################
+
+
+
 
 
