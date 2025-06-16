@@ -1,5 +1,10 @@
 {
   "scripts": {
     "test": "jest"
+  },
+  "author": "philiphe siqueira ferreira",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

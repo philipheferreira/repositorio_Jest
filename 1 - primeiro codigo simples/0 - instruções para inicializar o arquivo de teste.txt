@@ -1,0 +1,15 @@
+Precisa do node instalado, pode verificar usando o seguinte comando:
+
+* node -v
+
+Ter o npm disponível usando o seguinte comando para verificar se tem:
+
+* npm -v
+
+Caso não tenha instalado é necessário baixar as dependências para rodar o projeto, utilizando o comando a baixo:
+
+* npm install
+
+Agora é só executar o teste com jest:
+
+npm test
