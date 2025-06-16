@@ -1,4 +1,7 @@
 {
+  "name": "2---segundo-codigo-usando-matches",
+  "version": "1.0.0",
+  "description": "segundo codigo feito para o Jest",
   "scripts": {
     "test": "jest"
   },
